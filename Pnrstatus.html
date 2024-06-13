@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="Pnrstatus.css">
+    <title>PNR Enquirey</title>
+</head>
+<body> 
+ <div class="container"> 
+    <div class="navbar"> 
+        <ul>
+            <li style="font-size: 24px;"> Indian railways Enquiry</li>
+            <li> 
+                <a href="#">PNR Enquiry</a> 
+            </li>
+            <li> <a href="#">Reserved Train Between Stations</a></li>
+            <li> <a href=""> Seat availability</a></li>
+            <li><a href="">Fare Enquiry </a></li> 
+            <li><a href="">Reserved Train Schedule</a></li>
+        </ul>
+
+    </div> 
+    <div class="tagline"> 
+        <img src="https://animationvisarts.com/wp-content/uploads/2016/10/Indian-Railways-Logo-Design.jpg" alt="pic" height="160px" width="200px"> 
+        <p> INDIAN RAILWAYS PASSENGER RESERVATION ENQUIRY</p> 
+        <img src="https://www.indianrail.gov.in/enquiry/images/india.gif" alt="pic" height="100px" width="100px">
+
+    </div> 
+    <div class="subline">
+        <marquee behavior="" direction="left">Please help Indian railways and government of India in moving towards a digitized and cashless economy. Eradicate black money.
+        </marquee>
+    </div> 
+
+    <div class="line"> 
+        <p>Passenger Current Status Enquiry</p>
+
+    </div>  
+
+    <div>
+        <p class="para">
+            Enter the PNR for your booking below to get the current status. You will find it on the top left corner of the ticket.
+        </p>
+    </div>
+
+    <div class="checkpnr"> 
+        <label for="check1"> ENTER PNR NO</label>
+        <input class="box" id="pnr" name="pnr" type="text" placeholder="ENTER PNR" >  
+        <button  for="check" onclick="getPNRDetails()">CHECK DETAILS</button>
+    </div> 
+
+    
+        <p class="footer">Copyright © 2017, Centre For Railway Information Systems, Designed and Hosted by Shiva</p>
+    
+
+</div> 
+  <script>  
+  function getPNRDetails(pnr ) {
+
+    console.log(document.getElementById("pnr").value)
+    console.log("From function");
+    console.log(pnr);
+    const apiKey = 'a5e21d164bmsh20a49a9fa0dcc2dp1def3djsn7c61d2445044';
+//const pnr = pnr;
+
+fetch(`https://pnr-status-indian-railway.p.rapidapi.com/pnr-check/${pnr}`, {
+  method: 'GET',
+  headers: {
+    'x-rapidapi-host': 'pnr-status-indian-railway.p.rapidapi.com',
+    'x-rapidapi-key': 'a5e21d164bmsh20a49a9fa0dcc2dp1def3djsn7c61d2445044'
+  }
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data); 
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+  }
+  
+  </script>
+    
+</body>
+</html>

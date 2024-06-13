@@ -1,0 +1,99 @@
+*{
+    margin: 0; 
+    padding: 0;
+} 
+
+.navbar ul{
+    display: flex;  
+    height: 55px; 
+    align-items: center; 
+    padding-left: 80px;
+    gap: 40px; 
+    font-size: 17px;
+    background-color: #0E69B5 ; 
+    color: rgba(240, 248, 255, 0.877);
+
+}  
+ul li{
+list-style: none;
+} 
+ul li a{
+    text-decoration-line: none; 
+    color: aliceblue;
+} 
+
+
+.tagline{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around;
+} 
+
+.tagline p{
+    font-size: 30px;
+} 
+
+.subline{
+    width: 1200px;  
+    text-align: center; 
+    margin-left: 128px;
+    /* background-color: aqua; */
+}  
+
+.line{
+    margin-left: 300px; 
+    margin-top: 30px;
+    font-size: 30px; 
+    width: 800px;   
+    height: 45px; 
+    text-align: center; 
+     /* align-items: end; */
+    color: azure; 
+    background-color: #0E69B5  ;
+}  
+
+.checkpnr{  
+    width: 500px; 
+    height: 150px; 
+    /* border: 1px solid black; */
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 30px;  
+    margin-left: 30%;
+  
+}  
+
+
+.para{  
+    margin-top: 10px; 
+    font-size: 21px;
+    width: 650px;  
+    /* padding-left: 30px; */
+    margin-left: 310px;
+
+} 
+.checkpnr label{ 
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#check{
+    height: 25px; 
+    width: 250px;
+} 
+
+button{ 
+    height: 35px;
+    width: 200px; 
+    margin-top: 10px; 
+    background-color: #0E69B5 ; 
+    color: azure;
+
+} 
+
+.footer{ 
+    margin-top: 80px;
+    text-align: center;
+}
